@@ -1,3 +1,4 @@
+# main.py
 from fasthtml.common import *
 from anthropic import Anthropic
 from api_key import ANTHROPIC_API_KEY

@@ -1,18 +1,24 @@
+# config.py
 import os
 from api_key import ANTHROPIC_API_KEY
 
 # Topics
-TOPICS = ["Singapore history", "Farm animals", "Human body"]
-TRIVIA_TOPICS = [
-    "Magical Realms",
-    "Animal Adventures",
-    "Mystery and Detectives",
-    "Inventions and Gadgets",
-]
+TOPICS = sorted(["Singapore history", "Farm animals", "Human body"])
+TRIVIA_TOPICS = sorted(
+    [
+        "Magical Realms",
+        "Animal Adventures",
+        "Mystery and Detectives",
+        "Inventions and Gadgets",
+    ]
+)
 
 # Prompts
 SYSTEM_PROMPT = """
-You are an engaging storyteller for children aged 5-10. Your task is to create an interactive adventure story that incorporates educational elements about {topic}. The story should be fun, age-appropriate, and offer choices that lead to different paths. Each segment should be 2-3 sentences long, followed by 2-3 choices for the next action. Occasionally, include a trivia question related to {trivia_topic}.
+You are an engaging storyteller for children aged 5-10. 
+Your task is to create an interactive adventure story that incorporates educational elements about {topic}. 
+The story should be fun, age-appropriate, and offer choices that lead to different paths. Each segment should be 2-3 sentences long, followed by 2-3 choices for the next action. 
+Occasionally, include a trivia question related to {trivia_topic}.
 
 Remember:
 1. Keep the language simple and engaging for children.
